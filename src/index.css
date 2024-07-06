@@ -1,0 +1,187 @@
+@font-face {
+  font-family: SpaceGrotesk-bold;
+  src: url(fonts/static/SpaceGrotesk-SemiBold.ttf);
+}
+
+@font-face {
+  font-family: Space-regular;
+  src: url(fonts/static/SpaceGrotesk-Regular.ttf);
+}
+
+body, html {
+  height: 100%;
+  margin: 0;
+  background-color: #ffff;
+}
+
+
+.container-card {
+  display: flex;
+  height: 100%;
+}
+
+.container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+}
+
+.img-background {
+  height: 100vh;
+  background-image: url(img/bg-main-desktop.png);
+  background-size: cover;
+  background-position: left;
+}
+
+.card-background {
+  flex: 1;
+  height: 100vh;
+  background-color: #ffff;
+  margin-left: 100px;
+  flex-direction: column;
+}
+
+.form-container {
+  font-family: "Space-regular";
+}
+
+.form-controller {
+  margin-bottom: 20px;
+}
+
+.form-controller input {
+  padding: 15px;
+  width: 80%;
+  border: #b5b5b5 solid 0.5px;
+  border-radius: 3px;
+}
+
+.flex-card {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.flex-cardContainer {
+  margin-bottom: 20px;
+}
+
+
+.flex-cardContainer input{
+  width: 80px;
+  padding: 10px;
+  margin-right: 5px;
+  margin-top: 5px;
+  border: #b5b5b5 solid 0.5px;
+  border-radius: 3px;
+}
+#card-date-year {
+  width: 25%;
+}
+
+#card-date-month {
+  width: 25%;
+  padding: 10px;
+  margin-right: 15px;
+}
+
+
+
+#confirm {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40%;
+  padding: 10px;
+  margin: 0 auto;
+  background-color: hsl(278, 68%, 11%);
+  color: #f5f5f5;
+  border-radius: 8px;
+  border: none;
+  
+}
+
+.card-front {
+  font-family: "SpaceGrotesk-semibold";
+}
+
+.card-front img {
+  position: absolute;
+  width: 30%;
+  left: 24%;
+  top: 20%;
+  position: fixed;
+}
+
+.card-back img {
+  position: absolute;
+  width: 25%;
+  left: 30%;
+  bottom: 10%;
+  position: fixed;
+
+}
+
+#card {
+  position: absolute;
+  left: 25%;
+  top: 32.5%;
+  font-size: 2.5rem;
+  color: #f5f5f5;
+  z-index: 9999;
+  position: fixed;
+}
+
+#name-card {
+  position: absolute;
+  left: 25%;
+  top: 47%;
+  font-size: 1.2rem;
+  color: #f5f5f5;
+  z-index: 9999;
+  position: fixed;
+}
+
+#validade {
+  position: absolute;
+  left:49%;
+  top: 47%;
+  font-size: 1.2rem;
+  color: #f5f5f5;
+  z-index: 9999;
+  position: fixed;
+}
+
+#circle-white {
+  position: absolute;
+  top: 25%;
+  left: 26%;
+  width: 50px;
+  height: 50px;
+  background-color: #f5f5f5;
+  border-radius: 50%;
+  z-index: 9999;
+  position: fixed;
+}
+
+#min-circle {
+  position: absolute;
+  top: 26.5%;
+  left: 31.5%;
+  width: 30px;
+  height: 30px;
+  border: 1px solid #f5f5f5;
+  border-radius: 50%;
+  z-index: 9999;
+  position: fixed;
+}
+
+
+
+@media (max-width: 2800px) and (min-width: 1440px) {
+  .card-front img {
+    top: 15%;
+  }
+}
