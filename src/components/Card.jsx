@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { saveAs } from "file-saver";
 import CardFront from "../img/bg-card-front.png";
 import CardBack from "../img/bg-card-back.png";
 
@@ -11,6 +12,8 @@ const MainContainerCard = () => {
     const [cardCvc, setCvc] = useState("");
     const [form, setForm] = useState(true);
 
+    const [formData, setFormData] = useState(true);
+
     const onChangeName = (event) => {
        let name = event.target.value.replace(/[^A-Za-z]*$/g, "");
        
@@ -18,7 +21,8 @@ const MainContainerCard = () => {
         name = name.slice(0, 20);
        }
        
-       setName(name); 
+       setName(name);
+       
     }
 
     const onChageNumber = (event) => {
@@ -70,6 +74,17 @@ const MainContainerCard = () => {
 
     const onSubmitCard = () => {
         setForm(!form);
+
+        const formData = {
+            cardName, 
+            cardNumber,
+            validade: `${cardMonth}/${cardYear}`,
+            cvc: cardCvc
+        }
+
+        const jsonData = JSON.stringify(formData, null, 2);
+        const blob = new Blob([jsonData], { type: 'application/json' });
+        saveAs(blob, 'form-data-json');
     }
 
     const onFinish = () => {
