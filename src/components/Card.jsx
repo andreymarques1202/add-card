@@ -14,7 +14,6 @@ const MainContainerCard = () => {
                     <p id="card">0000 0000 0000 000</p>
                     <p id="name-card">BILLY BRUTO</p>
                     <p id="validade">00/00</p>
-                    <p></p>
                     <img src={CardFront} alt="card-front" />
                 </div>
                 <div className="card-back">
@@ -22,7 +21,7 @@ const MainContainerCard = () => {
                 </div>
                 </div>
                 <div className="container card-background">
-                    <form action="" classNama="form-container">
+                    <form action="" className="form-container">
                         <div className="form-controller">
                             <label htmlFor="card-name">CARDHOLDER NAME</label><br />
                             <input type="text" name="card-name" id="card-name" placeholder="e.g. Billy bruto"/>
