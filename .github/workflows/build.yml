@@ -1,4 +1,4 @@
-name: deploy
+name: Deploy to GitHub Pages
 
 on:
   push:
@@ -7,22 +7,26 @@ on:
 
 jobs:
   deploy:
-    runs-on: ubuntu-22.04
-    permissions:
-      contents: write
-    concurrency:
-      group: ${{ github.workflow }}-${{ github.ref }}
+    runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v2
+      - uses: actions/checkout@v2
+
+      - name: Setup Ruby and Bundler
+        uses: ruby/setup-ruby@v1
         with:
-          node-version: '16'
-      - name: Build web-app
+          ruby-version: '3.0'
+
+      - name: Install Jekyll and dependencies
         run: |
-          npm install
-          npm run build
-      - name: Deploy to gh-pages
+          gem install bundler
+          bundle install
+
+      - name: Build Jekyll site
+        run: bundle exec jekyll build
+
+      - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./build
+          publish_dir: ./_site
+          target_branch: gh-pages
