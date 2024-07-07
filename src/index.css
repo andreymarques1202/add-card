@@ -100,6 +100,7 @@ body, html {
   color: #f5f5f5;
   border-radius: 8px;
   border: none;
+  cursor:  pointer;
   
 }
 
@@ -178,6 +179,32 @@ body, html {
   
 }
 
+.circle-ok {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 18%;
+  right: 20.5%;
+  background-image: linear-gradient(hsl(278, 68%, 11%), hsl(300, 64%, 38%), hsl(269, 93%, 11%));
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+.circle-ok i {
+  color: #f5f5f5;
+  font-size: 2.4rem;
+}
+
+@media (max-width: 370px) and (min-width: 320px) {
+  .card-front img, #circle-white, #min-circle, #card, #name-card, #validade {
+    display: none;
+  }
+
+  
+}
+
 @media (max-width: 425px) {
   body, html {
     height: 100%;
@@ -241,10 +268,42 @@ body, html {
     margin: 5px;
     margin-bottom: 15px;
   }
+
+  .finish h1 {
+    font-family: "SpaceGrotesk-Bold";
+    position: absolute;
+    right: 15%;
+    bottom: 20%;
+  }
+
+  .finish p {
+    font-family: "Space-regular";
+    position: absolute;
+    color: #4a4a4a;
+    right: 9%;
+    bottom: 10%;
+  }
+
+  #confirm {
+    position: absolute;
+    bottom: 2%;
+    right: 30%;
+  }
+
+  .circle-ok {
+    position: absolute;
+    top: 48%;
+    right: 36%;
+    background-image: linear-gradient(hsl(278, 68%, 11%), hsl(300, 64%, 38%), hsl(269, 93%, 11%));
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    z-index: 999999;
+  }
   
 }
 
-@media (max-width: 768px) {
+@media (max-width: 768px) and (min-width: 375px) {
   .card-front img{
     left: 21%;
   }
@@ -285,6 +344,11 @@ body, html {
     top: 23.5%;
     left: 29.5%;
   }
+
+  .circle-ok {
+    display: none;
+  }
+  
 }
 
 @media (max-width:1200px) and (min-width: 1024px) {
@@ -321,6 +385,10 @@ body, html {
   #min-circle {
     left: 28%;
     top: 26%;
+  }
+
+  .circle-ok {
+    display: none;
   }
 }
 
