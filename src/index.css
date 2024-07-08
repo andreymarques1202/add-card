@@ -197,13 +197,41 @@ body, html {
   font-size: 2.4rem;
 }
 
-@media (min-width: 320px) and (max-width: 425px){
-  .card-front img, #circle-white, #min-circle, #card, #name-card, #validade {
+@media (min-width: 320px) and (max-width: 424px){
+  #circle-white, #min-circle {
     display: none;
   }
 
   #confirm {
     position: static;
+  }
+
+  .card-front img {
+    position: absolute;
+    left: 10%;
+  }
+
+  #card {
+    font-size: 1.5rem;
+    position: absolute;
+    top: 25%;
+    left: 13%;
+    z-index:  9999999;
+  }
+
+  #validade {
+    position: absolute;
+    top: 36%;
+    left: 70%;
+    
+  }
+
+  #name-card {
+    font-size: 0.8rem;
+    position: absolute;
+    top: 38.5%;
+    left: 13%;
+
   }
   
 }
@@ -235,18 +263,12 @@ body, html {
     position: static;
   }
 
-  #card {
-    position: absolute;
-    font-size: 0.7rem;
-    top: 20%;
-    z-index: 9999999;
-  }
-
   #name-card, #validade {
     z-index: 9999999;
   }
 
   #circle-white, #min-circle {
+    display: none;
     z-index: 9999999;
   }
 
