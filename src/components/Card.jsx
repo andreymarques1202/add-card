@@ -93,6 +93,10 @@ const MainContainerCard = () => {
 
     return(
         <>
+            <div className="compatibility">
+                    <h1>Seu dispositivo não tem tamanho de tela compativel!</h1>
+                    <h1>:(</h1>
+                </div>
             <div className="container-card">
                 <div className="container img-background">
                 <div className="card-front">

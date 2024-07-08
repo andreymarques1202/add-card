@@ -14,6 +14,11 @@ body, html {
   background-color: #ffff;
 }
 
+.compatibility {
+  display: none;
+  text-align: center;
+}
+
 
 .container-card {
   display: flex;
@@ -197,46 +202,18 @@ body, html {
   font-size: 2.4rem;
 }
 
-@media (min-width: 320px) and (max-width: 424px){
-  #circle-white, #min-circle {
+@media (max-width: 373px) and (min-width: 320px) {
+  .container-card {
     display: none;
   }
 
-  #confirm {
-    position: static;
-  }
-
-  .card-front img {
-    position: absolute;
-    left: 10%;
-  }
-
-  #card {
-    font-size: 1.5rem;
-    position: absolute;
-    top: 25%;
-    left: 13%;
-    z-index:  9999999;
-  }
-
-  #validade {
-    position: absolute;
-    top: 36%;
-    left: 70%;
-    
-  }
-
-  #name-card {
-    font-size: 0.8rem;
-    position: absolute;
-    top: 38.5%;
-    left: 13%;
-
+  .compatibility {
+    display: block;
   }
   
 }
 
-@media (max-width: 425px){
+@media (max-width: 425px) and (min-width: 375px) {
   body, html {
     height: 100%;
     overflow: hidden;
@@ -261,6 +238,28 @@ body, html {
 
   #confirm {
     position: static;
+  }
+
+  #card {
+    position: absolute;
+    top: 25%;
+    left: 27%;
+    font-size: 1.5rem;
+    z-index: 99999999;
+  }
+
+  #name-card {
+    font-size: 0.8rem;
+    position: absolute;
+    top: 38.5%;
+    left: 26%;
+  }
+
+  #validade {
+    font-size: 0.9rem;
+    position: absolute;
+    top: 37.5%;
+    left: 70%;
   }
 
   #name-card, #validade {
